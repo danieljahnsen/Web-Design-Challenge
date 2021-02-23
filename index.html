@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <title>Landing Page</title>
 </head>
 <body>
-    <!-- Using the navbar code from Day 3 Activity 7 -->
-    <nav class ="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- Navbar code with collapse bar from bootstrap page -->
+    <!-- https://getbootstrap.com/docs/4.0/components/navbar/  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">Latitude</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-
-        <a class="nav-item active">
-            <a class="nav-link" href="visual.html">Visualizations <span class="sr-only">(current)</span></a>
-        </a>
-        <a class="nav-item active">
-            <a class="nav-link" href="compare.html">Comparisons <span class="sr-only">(current)</span></a>
-        </a>
-        <a class="nav-item active">
-            <a class="nav-link" href="data.html">Data <span class="sr-only">(current)</span></a>
-        </a>
-
-
-        <!-- Collapse NaveBar COde From getbootstrap.com -->
-        <div class = "collapse navbar-collapse" id = "navbarSupportedContent">
-            <ul class = "nav navbar-nav navbar-right">
-                <li>Image 1</li>
-                <li>Image 2</li>
-                <li>Image 3</li>
-                <li>Image 4</li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="compare.html">Comparisons </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="data.html">Data </a>
+            </li>
+          </ul>
         </div>
-    </nav>
+
+        <!-- Dropdown button code from bootstrap.com -->
+        <!-- https://getbootstrap.com/docs/4.0/components/dropdowns/ -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="max_temp.html">Max Temperature</a>
+                <a class="dropdown-item" href="humid.html">Humidity</a>
+                <a class="dropdown-item" href="cloud.html">Cloudiness</a>
+                <a class="dropdown-item" href="wind_speed.html">Wind Speed</a>
+            </div>
+          </div>
+      </nav>
+
+
+
 
     <div class = "container">
         <section class = "container">
@@ -61,16 +70,22 @@
                     <h1 class = "display-4">Visualizations</h1>
                     <hr class = "my-4"/>
                     <div id = "images">
-                        <img src = "Resources/assets/images/Fig1.png">
-                        <img src = "Resources/assets/images/Fig2.png">
-                        <img src = "Resources/assets/images/Fig3.png">
-                        <img src = "Resources/assets/images/Fig4.png">
+                        <a href = "max_temp.html"><img src = "Resources/assets/images/Fig1.png"></a>
+                        <a href = "humid.html"><img src = "Resources/assets/images/Fig2.png"></a>
+                        <a href = "cloud.html"><img src = "Resources/assets/images/Fig3.png"></a>
+                        <a href = "wind_speed.html"><img src = "Resources/assets/images/Fig1.png"></a>
                     </div>
                 </article>
             </div>
         </section>
 
     </div>
+
+    <!-- required bootstrap scripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
 </body>
 </html>
